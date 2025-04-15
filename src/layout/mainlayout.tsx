@@ -5,7 +5,7 @@ import { Sidebar } from "./sidebar";
 export function MainLayout() {
     return (
         <div className="w-screen h-screen">
-            <header className="h-1/12 w-full fixed">
+            <header className="w-full fixed">
                 <HeaderLayout />
             </header>
             <div className="flex w-full h-full pt-20">

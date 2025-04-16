@@ -6,6 +6,7 @@ import { MyTasks } from "../pages/mytask";
 import { TasksCategories } from "../pages/taskcategories";
 import { Settings } from "../pages/settings";
 import { Help } from "../pages/help";
+import { ToastContainer } from "react-toastify"
 
 export function Navigation() {
     return (
@@ -20,6 +21,7 @@ export function Navigation() {
                     <Route path="/help" element={<Help />} />
                 </Route>
             </Routes>
+            <ToastContainer closeOnClick={true} theme="colored" />
         </BrowserRouter>
     )
 }

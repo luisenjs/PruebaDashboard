@@ -1,9 +1,12 @@
+import { TaskProvider } from "./context/taskscontext"
 import { Navigation } from "./navigation/navigation"
 
 function App() {
 
   return (
-    <Navigation />
+    <TaskProvider>
+      <Navigation />
+    </TaskProvider>
   )
 }
 

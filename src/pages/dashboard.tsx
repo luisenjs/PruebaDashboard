@@ -4,6 +4,8 @@ import { ToDoForm } from "../components/todoform";
 import { TodoCard } from "../components/todocard";
 import { TaskContext } from "../context/taskscontext";
 import { Task } from "../interfaces/task";
+import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 export function Dashboard() {
 
@@ -62,18 +64,18 @@ export function Dashboard() {
                     <div className="w-1/2 flex flex-col gap-2">
                         <div className="flex flex-col gap-2 p-5 rounded-lg shadow-md shadow-gray-300">
                             <span className="flex text-red-400 font-semibold"><ClipboardCheck className="text-gray-400" />Task Status</span>
-                            <div className="flex w-full gap-3 overflow-auto">
-                                <div className="flex flex-col gap-1">
-                                    <img className="w-40 aspect-square bg-gray-200" src="a" alt="a" />
-                                    <span className="flex items-center gap-2"><Circle className="text-green-500" size={12} fill="currentColor" />Completed</span>
+                            <div className="flex justify-between w-full gap-3 overflow-auto">
+                                <div className="flex flex-col gap-1 w-1/4">
+                                    <Skeleton circle className="aspect-square" />
+                                    <span className="flex justify-center items-center gap-2"><Circle className="text-green-500" size={12} fill="currentColor" />Completed</span>
                                 </div>
-                                <div className="flex flex-col gap-1">
-                                    <img className="w-40 aspect-square bg-gray-200" src="a" alt="a" />
-                                    <span className="flex items-center gap-2"><Circle className="text-blue-500" size={12} fill="currentColor" />In Progress</span>
+                                <div className="flex flex-col gap-1 w-1/4">
+                                    <Skeleton circle className="aspect-square" />
+                                    <span className="flex justify-center items-center gap-2"><Circle className="text-blue-500" size={12} fill="currentColor" />In Progress</span>
                                 </div>
-                                <div className="flex flex-col gap-1">
-                                    <img className="w-40 aspect-square bg-gray-200" src="a" alt="a" />
-                                    <span className="flex items-center gap-2"><Circle className="text-red-500" size={12} fill="currentColor" />Not Started</span>
+                                <div className="flex flex-col gap-1 w-1/4">
+                                    <Skeleton circle className="aspect-square" />
+                                    <span className="flex justify-center items-center gap-2"><Circle className="text-red-500" size={12} fill="currentColor" />Not Started</span>
                                 </div>
                             </div>
                         </div>

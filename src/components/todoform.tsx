@@ -74,7 +74,7 @@ export function ToDoForm({ isOpen, onClose }: ToDoFormProps) {
                         </select>
                         {errors.status && (<span className="text-red-500">{errors.status.message}</span>)}
                     </div>
-                    <button type="submit" className="bg-red-400 rounded-lg p-2 text-white">Cerrar</button>
+                    <button type="submit" className="bg-red-400 rounded-lg p-2 text-white">Guardar</button>
                 </form>
             </div>
         </div>
